@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="gallery-container">
+    <h1> Image Gallery</h1>
+    <div class="gallery-controls">
+      <input type="file" id="imageInput" accept="image/*" hidden />
+      
+      <select id="categorySelect">
+        <option value="" disabled selected>Select Category</option>
+        <option value="Nature">Nature</option>
+        <option value="People">People</option>
+        <option value="Architecture">Architecture</option>
+        <option value="Animals">Animals</option>
+      </select>
+      
+      <button id="addImageBtn">Add Image</button>
+
+      <select id="filterSelect">
+        <option value="All">All</option>
+        <option value="Nature">Nature</option>
+        <option value="People">People</option>
+        <option value="Architecture">Architecture</option>
+        <option value="Animals">Animals</option>
+      </select>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <!-- Images will be injected here -->
+    </div>
+
+    <div class="lightbox hidden" id="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded View" />
+      <div class="lightbox-controls">
+        <span id="prev" class="nav">&lt;</span>
+        <span id="next" class="nav">&gt;</span>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
